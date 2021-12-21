@@ -1,1 +1,0 @@
-# Base template for a minimal ROS2 package
