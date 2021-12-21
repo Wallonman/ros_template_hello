@@ -25,6 +25,9 @@ Create the package in the `src` sub-folder
 
 ``` bash
 ros2 pkg create --build-type ament_python hello_py_pkg
+
+# create the package and a first node (hello_py_pkg/hello_py_pkg/pubisher.py will be created)
+ros2 pkg create --build-type ament_python hello_py_pkg --node-name publisher
 ```
 > The folder structure and files are generated, the package is called `hello_py_pkg`
 
@@ -51,17 +54,36 @@ or
 colcon build --packages-select hello_py_pkg
 ```
 
-Install the package locally, from the worskpace folder
+Install (source) the package locally, from the worskpace folder, and run the publisher...
 
 ``` bash
+# source the setup files from inside the template_ws
 . install/local_setup.bash
+
+# And now ... run the publisher
+ros2 run hello_py_pkg publisher
 ```
 
-And now ... run
+... and run the subscriber in another terminal
 
 ``` bash
-ros2 run hello_py_pkg talker
+# source the setup files from inside the template_ws
+. install/local_setup.bash
+
+# And now ... run the subscriber
+ros2 run hello_py_pkg subscriber
 ```
+
+## Get some package information
+
+``` bash
+# list packages
+ros2 pkg executables hello_py_pkg
+
+# get package info
+ros2 pkg executables hello_py_pkg
+```
+
 
 
 
