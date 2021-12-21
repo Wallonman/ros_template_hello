@@ -32,7 +32,7 @@ ros2 pkg create --build-type ament_python hello_py_pkg
 
 ## Create the publisher and subscriber nodes and build
 
-Create the Python files `publisher.py` and `subscriber.py` under the `./hello_py_pkg/hello_py_pkg` write the code like the sample (hello_py_pkg/hello_py_pkg/publisher.py)
+Create the Python files `publisher.py` and `subscriber.py` under the `./hello_py_pkg/hello_py_pkg` write the code like the sample [](hello_py_pkg/hello_py_pkg/publisher.py)
 
 
 
