@@ -20,7 +20,8 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
-            'talker = hello_py_pkg.publisher:main'
+            'talker = hello_py_pkg.publisher:main',
+            'listener = hello_py_pkg.subscriber:main'
         ],
     },
 )

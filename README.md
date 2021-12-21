@@ -30,10 +30,38 @@ ros2 pkg create --build-type ament_python hello_py_pkg
 
 > Note the `./hello_py_pkg/hello_py_pkg` folder where the Python code of the nodes will be created later
 
-## Create the publisher and subscriber nodes and build
+## Create the publisher and subscriber nodes
 
-Create the Python files `publisher.py` and `subscriber.py` under the `./hello_py_pkg/hello_py_pkg` write the code like the sample [publisher.py](hello_py_pkg/hello_py_pkg/publisher.py)
+Create the Python files `publisher.py` and `subscriber.py` under the `./hello_py_pkg/hello_py_pkg` write the code like the sample [publisher.py](hello_py_pkg/hello_py_pkg/publisher.py) and [subscriber.py](hello_py_pkg/hello_py_pkg/subscriber.py)
 
+## Add entry points
+
+Look to the [setup.py](hello_py_pkg/setup.py)  to add the entry points for both publisher and subscriber
+
+## Finally let's build, install and run
+
+Now you can build.
+> The build must be launched from the workspace's root
+
+``` bash
+colcon build
+
+or
+
+colcon build --packages-select hello_py_pkg
+```
+
+Install the package locally, from the worskpace folder
+
+``` bash
+. install/local_setup.bash
+```
+
+And now ... run
+
+``` bash
+ros2 run hello_py_pkg talker
+```
 
 
 
