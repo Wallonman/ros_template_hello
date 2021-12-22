@@ -29,6 +29,7 @@ ros2 pkg create --build-type ament_python hello_py_pkg
 # create the package and a first node (hello_py_pkg/hello_py_pkg/pubisher.py will be created)
 ros2 pkg create --build-type ament_python hello_py_pkg --node-name publisher
 ```
+
 > The folder structure and files are generated, the package is called `hello_py_pkg`
 
 > Note the `./hello_py_pkg/hello_py_pkg` folder where the Python code of the nodes will be created later
